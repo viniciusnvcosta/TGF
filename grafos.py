@@ -61,6 +61,19 @@ def adde_all(graph, flag):
 
     return graph
 
+#CRUD GRAFO
+print("O grafo vai ser:")
+print("\n1 - Direcionado")
+print("2 - Não direcionado")
+d = int(input(">> "))
+
+if d == 1:
+    Graph = nx.DiGraph()
+
+elif d == 2:
+    Graph = nx.Graph()
+
+
 #CRUD VÉRTICE
 print("\n1 - Adicionar vértices um a um")
 print("2 - Adicionar vértices em bloco")
@@ -122,7 +135,7 @@ while (i != 0):
     elif i == 2:
         vortex = str(input("Vértice >> "))
 
-        if d == 2:
+        if i == 2:
           print("Vertices adjacentes: ", len(Graph[vortex]))
 
         else:
